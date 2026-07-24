@@ -122,9 +122,9 @@
   </div>
   <div class="hero-main">
     <div>
-      <h1>บ้านเดี่ยว หมู่บ้าน S-Gate เปี่ยมสุข<br>ราชพฤกษ์ 345 บางบัวทอง</h1>
+      <h1>ทาวน์โฮม หมู่บ้าน S-Gate เปี่ยมสุข<br>ราชพฤกษ์ 345 บางบัวทอง</h1>
       <div class="hero-loc">📍 <span>100/117 หมู่บ้าน S-Gate เปี่ยมสุข ราชพฤกษ์ 345 ต.ลำโพ อ.บางบัวทอง จ.นนทบุรี 11110</span></div>
-      <p class="hero-desc">บ้านเดี่ยวสภาพดี ทำเลเงียบสงบ ปลอดภัย ใกล้ถนนราชพฤกษ์และกาญจนาภิเษก เดินทางสะดวก ใกล้โรงเรียน ตลาด และโรงพยาบาล เหมาะสำหรับครอบครัวที่ต้องการบ้านพร้อมอยู่</p>
+      <p class="hero-desc">ทาวน์โฮมสภาพดี ทำเลเงียบสงบ ปลอดภัย ใกล้ถนนราชพฤกษ์และกาญจนาภิเษก เดินทางสะดวก ใกล้โรงเรียน ตลาด และโรงพยาบาล เหมาะสำหรับครอบครัวที่ต้องการบ้านพร้อมอยู่</p>
     </div>
     <div class="price-card">
       <div class="eyebrow">ราคาขาย</div>
@@ -134,7 +134,7 @@
       </div>
       <div class="price-hint">แตะเพื่อแก้ไขราคา · ระบบบันทึกในเบราว์เซอร์นี้อัตโนมัติ</div>
       <div class="cta-row">
-        <a class="btn btn-primary" id="callBtn" href="tel:0000000000">📞 โทรสอบถาม</a>
+        <a class="btn btn-primary" id="callBtn" href="tel:061-639-9498">📞 โทรสอบถาม</a>
         <a class="btn btn-outline" id="lineBtn" href="#" onclick="return false;">แชท LINE</a>
       </div>
     </div>
@@ -143,11 +143,11 @@
 
 <div class="facts">
   <div class="facts-grid">
-    <div class="fact"><label>ที่ดิน (ตร.ว.)</label><input id="factLand" value="ระบุ"></div>
-    <div class="fact"><label>พื้นที่ใช้สอย (ตร.ม.)</label><input id="factArea" value="ระบุ"></div>
-    <div class="fact"><label>ห้องนอน</label><input id="factBed" value="ระบุ"></div>
-    <div class="fact"><label>ห้องน้ำ</label><input id="factBath" value="ระบุ"></div>
-    <div class="fact"><label>ที่จอดรถ</label><input id="factParking" value="ระบุ"></div>
+    <div class="fact"><label>ที่ดิน (ตร.ว.)</label><input id="factLand" value="21"></div>
+    <div class="fact"><label>พื้นที่ใช้สอย (ตร.ม.)</label><input id="factArea" value="127.5"></div>
+    <div class="fact"><label>ห้องนอน</label><input id="factBed" value="3"></div>
+    <div class="fact"><label>ห้องน้ำ</label><input id="factBath" value="2"></div>
+    <div class="fact"><label>ที่จอดรถ</label><input id="factParking" value="2"></div>
   </div>
 </div>
 
@@ -158,25 +158,6 @@
       <h2>แกลเลอรี่ภาพบ้าน</h2>
       <p>รูปในส่วนนี้มาจากไฟล์จริงในโฟลเดอร์ <code>images/</code> ของโปรเจกต์ — ทุกคนที่เปิดลิงก์จะเห็นรูปชุดเดียวกันเสมอ</p>
     </div>
-    <div id="publicGalleryGrid"></div>
-    <p class="gallery-note" id="publicGalleryEmptyNote" style="display:none">ยังไม่มีรูปในโฟลเดอร์ <code>images/</code> — ดูวิธีเพิ่มรูปด้านล่าง</p>
-
-    <details style="margin-top:18px;">
-      <summary style="cursor:pointer;font-size:13px;color:var(--forest);font-weight:600;">วิธีเพิ่มรูปจริงให้ทุกคนเห็น (ทำครั้งเดียว)</summary>
-      <ol style="margin:12px 0 0 20px;font-size:13.5px;color:var(--ink-soft);line-height:2;">
-        <li>ใน repo GitHub ของคุณ สร้างโฟลเดอร์ชื่อ <code>images</code> ให้อยู่ระดับเดียวกับไฟล์ .html นี้</li>
-        <li>อัปโหลดไฟล์รูปเข้าโฟลเดอร์นั้น เช่น <code>photo1.jpg</code>, <code>photo2.jpg</code>, <code>photo3.jpg</code> (แนะนำตั้งชื่อไฟล์เป็นภาษาอังกฤษ ไม่มีเว้นวรรค)</li>
-        <li>เปิดไฟล์ .html นี้ด้วยโปรแกรมแก้ไขข้อความ หาโค้ดบรรทัด <code>const PHOTOS = [...]</code> แล้วใส่ชื่อไฟล์ที่อัปโหลดลงไปตามตัวอย่าง</li>
-        <li>Commit และ push ขึ้น GitHub ตามปกติ รอ GitHub Pages build เสร็จแล้วเปิดดูได้เลย</li>
-      </ol>
-    </details>
-
-    <p class="gallery-note" style="margin-top:18px;">ตัวอย่างโค้ดที่ต้องแก้ในไฟล์:</p>
-    <pre style="background:var(--forest);color:#E7E9E1;padding:14px 16px;font-size:12.5px;overflow-x:auto;border-radius:2px;">const PHOTOS = [
-  "images/photo1.jpg",
-  "images/photo2.jpg",
-  "images/photo3.jpg"
-];</pre>
 
     <div class="section-head" style="margin-top:36px;">
       <h3 style="font-family:'Noto Serif Thai',serif;color:var(--forest);font-size:16px;">ดูตัวอย่างรูปส่วนตัว (ก่อนใส่ไฟล์จริง)</h3>
