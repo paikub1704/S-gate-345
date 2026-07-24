@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>บ้านขาย — S-Gate เปี่ยมสุข ราชพฤกษ์ 345 บางบัวทอง</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@500;600;700&family=Noto+Sans+Thai:wght@400;500;600;700&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF6EE; --paper:#FFFDF9;
+    --ink:#2B2B26; --ink-soft:#5C5A50;
+    --forest:#1F3A2E; --forest-deep:#152A20;
+    --gold:#B9863F; --gold-soft:#E9D3AC;
+    --sage:#E8ECE3; --sage-line:#D2DBC9;
+    --danger:#B3492F;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Noto Sans Thai','Inter',sans-serif;
+    background:var(--cream); color:var(--ink); line-height:1.6;
+  }
+  .eyebrow{font-family:'Inter',sans-serif;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+  h1,h2,h3{font-family:'Noto Serif Thai',serif; color:var(--forest);}
+  a{color:inherit;}
+
+  /* ===== HERO ===== */
+  .hero{background:var(--forest);color:var(--cream);padding:0;}
+  .hero-top{max-width:1080px;margin:0 auto;padding:26px 24px 0;display:flex;justify-content:space-between;align-items:center;}
+  .brand{font-family:'Noto Serif Thai',serif;font-weight:700;font-size:18px;letter-spacing:.02em;}
+  .brand span{color:var(--gold);}
+  .hero-badge{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(233,211,172,.5);color:var(--gold-soft);padding:5px 12px;border-radius:2px;}
+
+  .hero-main{max-width:1080px;margin:0 auto;padding:28px 24px 50px;display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:end;}
+  .hero-main h1{color:#fff;font-size:clamp(28px,4vw,42px);line-height:1.25;font-weight:600;}
+  .hero-loc{margin-top:10px;color:var(--gold-soft);font-size:14.5px;display:flex;gap:8px;align-items:flex-start;}
+  .hero-desc{margin-top:16px;color:#D9DDD3;font-size:14.5px;max-width:480px;}
+  .price-card{background:var(--paper);color:var(--ink);padding:22px 24px;border-radius:2px;box-shadow:0 20px 50px -20px rgba(0,0,0,.5);}
+  .price-card .eyebrow{color:var(--forest);}
+  .price-row{display:flex;align-items:baseline;gap:8px;margin-top:6px;}
+  .price-row input{
+    font-family:'Noto Serif Thai',serif;font-weight:700;font-size:30px;color:var(--forest);
+    border:none;background:transparent;width:100%;outline:none;border-bottom:1px dashed var(--sage-line);padding:2px 0;
+  }
+  .price-row .unit{font-size:14px;color:var(--ink-soft);white-space:nowrap;}
+  .price-hint{font-size:11.5px;color:var(--ink-soft);margin-top:4px;}
+  .cta-row{display:flex;gap:10px;margin-top:16px;}
+  .btn{font-family:'Inter',sans-serif;font-weight:600;font-size:13.5px;padding:11px 18px;border-radius:2px;border:none;cursor:pointer;text-align:center;flex:1;text-decoration:none;display:block;}
+  .btn-primary{background:var(--gold);color:#fff;}
+  .btn-primary:hover{background:#A6752F;}
+  .btn-outline{background:transparent;border:1px solid var(--forest);color:var(--forest);}
+  .btn-outline:hover{background:var(--sage);}
+
+  /* ===== QUICK FACTS ===== */
+  .facts{max-width:1080px;margin:-28px auto 0;padding:0 24px;position:relative;z-index:2;}
+  .facts-grid{background:var(--paper);display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--sage-line);box-shadow:0 16px 40px -22px rgba(31,58,46,.35);}
+  .fact{padding:18px 16px;border-right:1px solid var(--sage-line);}
+  .fact:last-child{border-right:none;}
+  .fact label{display:block;font-family:'Inter',sans-serif;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px;}
+  .fact input{font-family:'Noto Serif Thai',serif;font-weight:600;font-size:18px;color:var(--forest);border:none;background:transparent;width:100%;outline:none;}
+  @media (max-width:760px){.facts-grid{grid-template-columns:repeat(2,1fr);}.fact:nth-child(2){border-right:none;}.hero-main{grid-template-columns:1fr;}}
+
+  main{max-width:1080px;margin:0 auto;padding:64px 24px 90px;}
+  section{margin-bottom:64px;}
+  .section-head{margin-bottom:22px;}
+  .section-head h2{font-size:24px;font-weight:600;}
+  .section-head p{color:var(--ink-soft);font-size:14px;margin-top:6px;max-width:600px;}
+
+  /* ===== GALLERY ===== */
+  #galleryGrid, #publicGalleryGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}
+  .photo-slot{position:relative;aspect-ratio:4/3;background:var(--sage);border:1px solid var(--sage-line);overflow:hidden;display:flex;align-items:center;justify-content:center;}
+  .photo-slot img{width:100%;height:100%;object-fit:cover;}
+  .photo-slot.empty{border-style:dashed;color:var(--ink-soft);flex-direction:column;gap:6px;font-size:12.5px;cursor:pointer;}
+  .photo-slot.empty:hover{background:var(--sage-line);}
+  .photo-slot .del{position:absolute;top:6px;right:6px;background:rgba(21,42,32,.75);color:#fff;border:none;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:13px;line-height:1;}
+  #fileInput{display:none;}
+  .gallery-note{font-size:12.5px;color:var(--ink-soft);margin-top:12px;line-height:1.7;background:var(--sage);border-left:3px solid var(--gold);padding:10px 14px;}
+
+  /* ===== DESCRIPTION ===== */
+  #descBox{width:100%;min-height:120px;font-family:'Noto Sans Thai',sans-serif;font-size:14.5px;color:var(--ink);background:var(--paper);border:1px solid var(--sage-line);padding:16px;resize:vertical;outline:none;line-height:1.8;}
+  #descBox:focus{border-color:var(--gold);}
+
+  /* ===== NEARBY ===== */
+  .nearby-cat{margin-bottom:28px;}
+  .nearby-cat h3{font-size:15.5px;font-weight:600;color:var(--forest);display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  .nearby-cat h3::before{content:"";width:8px;height:8px;background:var(--gold);border-radius:50%;display:inline-block;}
+  .place-list{display:flex;flex-direction:column;gap:1px;background:var(--sage-line);border:1px solid var(--sage-line);}
+  .place-row{background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font-size:14px;}
+  .place-name{color:var(--ink);}
+  .place-dist{font-family:'Inter',sans-serif;font-weight:600;color:var(--forest);font-size:13px;white-space:nowrap;padding-left:16px;}
+  .dist-note{font-size:12px;color:var(--ink-soft);margin-top:10px;}
+
+  /* ===== MAP ===== */
+  .map-wrap{border:1px solid var(--sage-line);overflow:hidden;}
+  .map-wrap iframe{width:100%;height:380px;border:0;display:block;}
+  .addr-box{background:var(--forest);color:#fff;padding:20px 24px;margin-top:10px;display:flex;gap:14px;align-items:flex-start;}
+  .addr-box .eyebrow{color:var(--gold-soft);}
+  .addr-box p{margin-top:6px;font-size:14.5px;color:#E7E9E1;}
+
+  /* ===== CONTACT ===== */
+  .contact-box{background:var(--forest);color:#fff;padding:40px 32px;text-align:center;}
+  .contact-box h2{color:#fff;}
+  .contact-box p{color:#D9DDD3;margin-top:8px;font-size:14.5px;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:420px;margin:24px auto 0;}
+  .contact-field{text-align:left;}
+  .contact-field label{display:block;font-family:'Inter',sans-serif;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:6px;}
+  .contact-field input{width:100%;font-size:14px;padding:9px 10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.06);color:#fff;border-radius:2px;outline:none;}
+  .contact-field input::placeholder{color:rgba(255,255,255,.4);}
+  .contact-box .btn-primary{max-width:420px;margin:22px auto 0;}
+
+  footer{text-align:center;padding:26px;font-size:12px;color:var(--ink-soft);}
+  .save-toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--forest);color:#fff;padding:10px 20px;border-radius:3px;font-size:13px;opacity:0;transition:all .25s;pointer-events:none;z-index:50;}
+  .save-toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-top">
+    <div class="brand">บ้าน<span>ดี</span>ขาย</div>
+    <div class="hero-badge">ประกาศขายบ้านมือสอง</div>
+  </div>
+  <div class="hero-main">
+    <div>
+      <h1>บ้านเดี่ยว หมู่บ้าน S-Gate เปี่ยมสุข<br>ราชพฤกษ์ 345 บางบัวทอง</h1>
+      <div class="hero-loc">📍 <span>100/117 หมู่บ้าน S-Gate เปี่ยมสุข ราชพฤกษ์ 345 ต.ลำโพ อ.บางบัวทอง จ.นนทบุรี 11110</span></div>
+      <p class="hero-desc">บ้านเดี่ยวสภาพดี ทำเลเงียบสงบ ปลอดภัย ใกล้ถนนราชพฤกษ์และกาญจนาภิเษก เดินทางสะดวก ใกล้โรงเรียน ตลาด และโรงพยาบาล เหมาะสำหรับครอบครัวที่ต้องการบ้านพร้อมอยู่</p>
+    </div>
+    <div class="price-card">
+      <div class="eyebrow">ราคาขาย</div>
+      <div class="price-row">
+        <input id="priceInput" type="text" value="ระบุราคาขาย" onfocus="if(this.value==='ระบุราคาขาย')this.value=''">
+        <span class="unit">บาท</span>
+      </div>
+      <div class="price-hint">แตะเพื่อแก้ไขราคา · ระบบบันทึกในเบราว์เซอร์นี้อัตโนมัติ</div>
+      <div class="cta-row">
+        <a class="btn btn-primary" id="callBtn" href="tel:0000000000">📞 โทรสอบถาม</a>
+        <a class="btn btn-outline" id="lineBtn" href="#" onclick="return false;">แชท LINE</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="facts-grid">
+    <div class="fact"><label>ที่ดิน (ตร.ว.)</label><input id="factLand" value="ระบุ"></div>
+    <div class="fact"><label>พื้นที่ใช้สอย (ตร.ม.)</label><input id="factArea" value="ระบุ"></div>
+    <div class="fact"><label>ห้องนอน</label><input id="factBed" value="ระบุ"></div>
+    <div class="fact"><label>ห้องน้ำ</label><input id="factBath" value="ระบุ"></div>
+    <div class="fact"><label>ที่จอดรถ</label><input id="factParking" value="ระบุ"></div>
+  </div>
+</div>
+
+<main>
+
+  <section>
+    <div class="section-head">
+      <h2>แกลเลอรี่ภาพบ้าน</h2>
+      <p>รูปในส่วนนี้มาจากไฟล์จริงในโฟลเดอร์ <code>images/</code> ของโปรเจกต์ — ทุกคนที่เปิดลิงก์จะเห็นรูปชุดเดียวกันเสมอ</p>
+    </div>
+    <div id="publicGalleryGrid"></div>
+    <p class="gallery-note" id="publicGalleryEmptyNote" style="display:none">ยังไม่มีรูปในโฟลเดอร์ <code>images/</code> — ดูวิธีเพิ่มรูปด้านล่าง</p>
+
+    <details style="margin-top:18px;">
+      <summary style="cursor:pointer;font-size:13px;color:var(--forest);font-weight:600;">วิธีเพิ่มรูปจริงให้ทุกคนเห็น (ทำครั้งเดียว)</summary>
+      <ol style="margin:12px 0 0 20px;font-size:13.5px;color:var(--ink-soft);line-height:2;">
+        <li>ใน repo GitHub ของคุณ สร้างโฟลเดอร์ชื่อ <code>images</code> ให้อยู่ระดับเดียวกับไฟล์ .html นี้</li>
+        <li>อัปโหลดไฟล์รูปเข้าโฟลเดอร์นั้น เช่น <code>photo1.jpg</code>, <code>photo2.jpg</code>, <code>photo3.jpg</code> (แนะนำตั้งชื่อไฟล์เป็นภาษาอังกฤษ ไม่มีเว้นวรรค)</li>
+        <li>เปิดไฟล์ .html นี้ด้วยโปรแกรมแก้ไขข้อความ หาโค้ดบรรทัด <code>const PHOTOS = [...]</code> แล้วใส่ชื่อไฟล์ที่อัปโหลดลงไปตามตัวอย่าง</li>
+        <li>Commit และ push ขึ้น GitHub ตามปกติ รอ GitHub Pages build เสร็จแล้วเปิดดูได้เลย</li>
+      </ol>
+    </details>
+
+    <p class="gallery-note" style="margin-top:18px;">ตัวอย่างโค้ดที่ต้องแก้ในไฟล์:</p>
+    <pre style="background:var(--forest);color:#E7E9E1;padding:14px 16px;font-size:12.5px;overflow-x:auto;border-radius:2px;">const PHOTOS = [
+  "images/photo1.jpg",
+  "images/photo2.jpg",
+  "images/photo3.jpg"
+];</pre>
+
+    <div class="section-head" style="margin-top:36px;">
+      <h3 style="font-family:'Noto Serif Thai',serif;color:var(--forest);font-size:16px;">ดูตัวอย่างรูปส่วนตัว (ก่อนใส่ไฟล์จริง)</h3>
+      <p>คลิกช่องว่างเพื่ออัปโหลดรูปจากเครื่องนี้ดูตัวอย่างก่อนได้ — รูปกลุ่มนี้จะเห็น<b>เฉพาะบนอุปกรณ์ที่อัปโหลดเท่านั้น</b> ไม่แสดงให้คนอื่นเห็นเมื่อขึ้น GitHub Pages</p>
+    </div>
+    <div id="galleryGrid"></div>
+    <input type="file" id="fileInput" accept="image/*" multiple>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>รายละเอียดบ้าน</h2></div>
+    <textarea id="descBox" placeholder="เขียนรายละเอียดเพิ่มเติมเกี่ยวกับบ้าน เช่น ปีที่สร้าง ต่อเติมอะไรบ้าง เฟอร์นิเจอร์ที่ให้พร้อมบ้าน สภาพบ้าน จุดเด่นของทำเล ฯลฯ"></textarea>
+  </section>
+
+  <section>
+    <div class="section-head">
+      <h2>สถานที่ใกล้เคียง</h2>
+      <p>ระยะทางโดยประมาณแบบเส้นตรงจากบ้าน (ระยะทางจริงตามถนนอาจมากกว่านี้เล็กน้อย)</p>
+    </div>
+
+    <div class="nearby-cat">
+      <h3>โรงเรียน</h3>
+      <div class="place-list">
+        <div class="place-row"><span class="place-name">โรงเรียนวัดลำโพ</span><span class="place-dist">≈ 0.4 กม.</span></div>
+        <div class="place-row"><span class="place-name">โรงเรียนสารสาสน์วิเทศ บางบัวทอง</span><span class="place-dist">≈ 2.0 กม.</span></div>
+      </div>
+    </div>
+
+    <div class="nearby-cat">
+      <h3>ตลาด & ห้างสรรพสินค้า</h3>
+      <div class="place-list">
+        <div class="place-row"><span class="place-name">ตลาดบัวทอง</span><span class="place-dist">≈ 3.8 กม.</span></div>
+        <div class="place-row"><span class="place-name">Big C mini เอสโซ่ บางบัวทอง-สุพรรณ</span><span class="place-dist">≈ 3.3 กม.</span></div>
+        <div class="place-row"><span class="place-name">Lotus's บางกรวย-ไทรน้อย</span><span class="place-dist">≈ 4.4 กม.</span></div>
+        <div class="place-row"><span class="place-name">เซ็นทรัล เวสต์เกต + MRT ตลาดบางใหญ่</span><span class="place-dist">≈ 8.6 กม.</span></div>
+      </div>
+    </div>
+
+    <div class="nearby-cat">
+      <h3>โรงพยาบาล</h3>
+      <div class="place-list">
+        <div class="place-row"><span class="place-name">โรงพยาบาลบางบัวทอง</span><span class="place-dist">≈ 4.2 กม.</span></div>
+        <div class="place-row"><span class="place-name">โรงพยาบาลกรุงไทยเวสต์ (Krungthai Western)</span><span class="place-dist">≈ 4.4 กม.</span></div>
+        <div class="place-row"><span class="place-name">โรงพยาบาลเกษมราษฎร์ รัตนาธิเบศร์</span><span class="place-dist">≈ 8.7 กม.</span></div>
+      </div>
+    </div>
+
+    <div class="nearby-cat">
+      <h3>ความสะดวกทั่วไป & การเดินทาง</h3>
+      <div class="place-list">
+        <div class="place-row"><span class="place-name">7-Eleven ริมถนนราชพฤกษ์ 345</span><span class="place-dist">≈ 2.2 กม.</span></div>
+        <div class="place-row"><span class="place-name">เชื่อมต่อถนนกาญจนาภิเษก (วงแหวนตะวันตก)</span><span class="place-dist">ใกล้เคียง</span></div>
+        <div class="place-row"><span class="place-name">รถไฟฟ้า MRT สายสีม่วง สถานีตลาดบางใหญ่</span><span class="place-dist">≈ 8.6 กม.</span></div>
+      </div>
+    </div>
+
+    <p class="dist-note">* ระยะทางคำนวณจากพิกัดหมู่บ้าน S-Gate เปี่ยมสุข ราชพฤกษ์ 345 หากต้องการเพิ่มสถานที่อื่น บอกชื่อสถานที่มาได้ ผมจะช่วยค้นและคำนวณระยะทางให้เพิ่ม</p>
+  </section>
+
+  <section>
+    <div class="section-head"><h2>ตำแหน่งที่ตั้ง</h2></div>
+    <div class="map-wrap">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=100.4319%2C13.9483%2C100.4479%2C13.9563&layer=mapnik&marker=13.9523%2C100.4399" loading="lazy"></iframe>
+    </div>
+    <div class="addr-box">
+      <div>📍</div>
+      <div>
+        <div class="eyebrow">ที่อยู่</div>
+        <p>100/117 หมู่บ้าน S-Gate เปี่ยมสุข ราชพฤกษ์ 345<br>ตำบลลำโพ อำเภอบางบัวทอง จังหวัดนนทบุรี 11110</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="contact-box">
+  <h2>สนใจติดต่อสอบถาม</h2>
+  <p>กรอกเบอร์โทรและ LINE ID ของผู้ขาย เพื่อให้ผู้สนใจติดต่อได้สะดวก</p>
+  <div class="contact-grid">
+    <div class="contact-field"><label>เบอร์โทร</label><input id="ownerPhone" placeholder="08X-XXX-XXXX"></div>
+    <div class="contact-field"><label>LINE ID</label><input id="ownerLine" placeholder="@lineid"></div>
+  </div>
+  <a class="btn btn-primary" style="max-width:420px;margin:22px auto 0;" href="#" onclick="return false;">💬 ส่งข้อความสอบถาม</a>
+</div>
+
+<footer>S-Gate เปี่ยมสุข ราชพฤกษ์ 345 · บางบัวทอง นนทบุรี — ประกาศขายบ้านมือสอง</footer>
+<div class="save-toast" id="saveToast">บันทึกแล้ว</div>
+
+<script>
+  // ---------- persistence helpers ----------
+  const store = {
+    get(k, fallback){ try{ const v = localStorage.getItem(k); return v===null? fallback : JSON.parse(v);}catch(e){return fallback;} },
+    set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+  };
+  let toastTimer;
+  function toast(){
+    const el = document.getElementById('saveToast');
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>el.classList.remove('show'), 1400);
+  }
+
+  // ---------- editable text fields (price, facts, description, contact) ----------
+  const fieldIds = ['priceInput','factLand','factArea','factBed','factBath','factParking','ownerPhone','ownerLine'];
+  fieldIds.forEach(id=>{
+    const el = document.getElementById(id);
+    const saved = store.get('field_'+id, null);
+    if(saved !== null) el.value = saved;
+    el.addEventListener('change', ()=>{ store.set('field_'+id, el.value); toast(); updateCallLink(); });
+  });
+  const descBox = document.getElementById('descBox');
+  descBox.value = store.get('field_descBox', '');
+  descBox.addEventListener('change', ()=>{ store.set('field_descBox', descBox.value); toast(); });
+
+  function updateCallLink(){
+    const phone = document.getElementById('ownerPhone').value.replace(/[^0-9+]/g,'');
+    document.getElementById('callBtn').href = phone ? ('tel:'+phone) : '#';
+  }
+  updateCallLink();
+
+  // ---------- public gallery (real files in /images, edit this list) ----------
+  const PHOTOS = [
+    // ตัวอย่าง: ใส่ชื่อไฟล์รูปที่อยู่ในโฟลเดอร์ images/ ตรงนี้ แล้ว push ขึ้น GitHub
+    // "images/photo1.jpg",
+    // "images/photo2.jpg",
+    // "images/photo3.jpg",
+  ];
+  const publicGrid = document.getElementById('publicGalleryGrid');
+  const publicEmptyNote = document.getElementById('publicGalleryEmptyNote');
+  function renderPublicGallery(){
+    publicGrid.innerHTML = '';
+    if(PHOTOS.length === 0){
+      publicGrid.style.display = 'none';
+      publicEmptyNote.style.display = 'block';
+      return;
+    }
+    publicGrid.style.display = 'grid';
+    publicEmptyNote.style.display = 'none';
+    PHOTOS.forEach(src=>{
+      const slot = document.createElement('div');
+      slot.className = 'photo-slot';
+      slot.innerHTML = `<img src="${src}" loading="lazy" alt="รูปบ้าน">`;
+      publicGrid.appendChild(slot);
+    });
+  }
+  renderPublicGallery();
+
+  // ---------- private preview gallery (this device only) ----------
+  const MAX_PHOTOS = 12;
+  let photos = store.get('housePhotos', []);
+  const grid = document.getElementById('galleryGrid');
+  const fileInput = document.getElementById('fileInput');
+
+  function renderGallery(){
+    grid.innerHTML = '';
+    photos.forEach((src, idx)=>{
+      const slot = document.createElement('div');
+      slot.className = 'photo-slot';
+      slot.innerHTML = `<img src="${src}"><button class="del" title="ลบรูป">✕</button>`;
+      slot.querySelector('.del').onclick = (e)=>{ e.stopPropagation(); photos.splice(idx,1); store.set('housePhotos', photos); renderGallery(); };
+      grid.appendChild(slot);
+    });
+    if(photos.length < MAX_PHOTOS){
+      const empty = document.createElement('div');
+      empty.className = 'photo-slot empty';
+      empty.innerHTML = '<span style="font-size:22px">＋</span><span>เพิ่มรูปภาพ</span>';
+      empty.onclick = ()=> fileInput.click();
+      grid.appendChild(empty);
+    }
+  }
+  fileInput.addEventListener('change', (e)=>{
+    const files = Array.from(e.target.files).slice(0, MAX_PHOTOS - photos.length);
+    let remaining = files.length;
+    if(remaining === 0) return;
+    files.forEach(file=>{
+      const reader = new FileReader();
+      reader.onload = ()=>{
+        photos.push(reader.result);
+        remaining--;
+        if(remaining === 0){ store.set('housePhotos', photos); renderGallery(); toast(); }
+      };
+      reader.readAsDataURL(file);
+    });
+    fileInput.value = '';
+  });
+  renderGallery();
+</script>
+
+</body>
+</html>
