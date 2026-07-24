@@ -129,12 +129,12 @@
     <div class="price-card">
       <div class="eyebrow">ราคาขาย</div>
       <div class="price-row">
-        <input id="priceInput" type="text" value="ระบุราคาขาย" onfocus="if(this.value==='ระบุราคาขาย')this.value=''">
+        <input id="priceInput" type="text" value="ระบุราคาขาย" onfocus="if(this.value==='3000000')this.value=''">
         <span class="unit">บาท</span>
       </div>
       <div class="price-hint">แตะเพื่อแก้ไขราคา · ระบบบันทึกในเบราว์เซอร์นี้อัตโนมัติ</div>
       <div class="cta-row">
-        <a class="btn btn-primary" id="callBtn" href="tel:061-639-9498">📞 โทรสอบถาม</a>
+        <a class="btn btn-primary" id="callBtn" href="tel:0000000000">📞 โทรสอบถาม</a>
         <a class="btn btn-outline" id="lineBtn" href="#" onclick="return false;">แชท LINE</a>
       </div>
     </div>
@@ -143,8 +143,8 @@
 
 <div class="facts">
   <div class="facts-grid">
-    <div class="fact"><label>ที่ดิน (ตร.ว.)</label><input id="factLand" value="21"></div>
-    <div class="fact"><label>พื้นที่ใช้สอย (ตร.ม.)</label><input id="factArea" value="127.5"></div>
+    <div class="fact"><label>ที่ดิน (ตร.ว.)</label><input id="factLand" value="22"></div>
+    <div class="fact"><label>พื้นที่ใช้สอย (ตร.ม.)</label><input id="factArea" value="127"></div>
     <div class="fact"><label>ห้องนอน</label><input id="factBed" value="3"></div>
     <div class="fact"><label>ห้องน้ำ</label><input id="factBath" value="2"></div>
     <div class="fact"><label>ที่จอดรถ</label><input id="factParking" value="2"></div>
@@ -158,18 +158,36 @@
       <h2>แกลเลอรี่ภาพบ้าน</h2>
       <p>รูปในส่วนนี้มาจากไฟล์จริงในโฟลเดอร์ <code>images/</code> ของโปรเจกต์ — ทุกคนที่เปิดลิงก์จะเห็นรูปชุดเดียวกันเสมอ</p>
     </div>
-
-    <div class="section-head" style="margin-top:36px;">
-      <h3 style="font-family:'Noto Serif Thai',serif;color:var(--forest);font-size:16px;">ดูตัวอย่างรูปส่วนตัว (ก่อนใส่ไฟล์จริง)</h3>
-      <p>คลิกช่องว่างเพื่ออัปโหลดรูปจากเครื่องนี้ดูตัวอย่างก่อนได้ — รูปกลุ่มนี้จะเห็น<b>เฉพาะบนอุปกรณ์ที่อัปโหลดเท่านั้น</b> ไม่แสดงให้คนอื่นเห็นเมื่อขึ้น GitHub Pages</p>
-    </div>
+    <div id="publicGalleryGrid"></div>
+    <p class="gallery-note" id="publicGalleryEmptyNote" style="display:none">ยังไม่มีรูปในแกลเลอรี่</p>
     <div id="galleryGrid"></div>
     <input type="file" id="fileInput" accept="image/*" multiple>
   </section>
 
   <section>
     <div class="section-head"><h2>รายละเอียดบ้าน</h2></div>
-    <textarea id="descBox" placeholder="เขียนรายละเอียดเพิ่มเติมเกี่ยวกับบ้าน เช่น ปีที่สร้าง ต่อเติมอะไรบ้าง เฟอร์นิเจอร์ที่ให้พร้อมบ้าน สภาพบ้าน จุดเด่นของทำเล ฯลฯ"></textarea>
+    <textarea id="descBox" placeholder="โครงการ S Gate Town ราชพฤกษ์ - 345 พัฒนาโครงการโดย บริษัท เปี่ยมสุข พร็อพเพอร์ตี้ ดีเวลลอปเม้นท์ จำกัด ถือเป็นบริษัทผู้พัฒนาอสังหาริมทรัพย์ที่น่าสนใจอีกรายมีผลงานพัฒนาบ้านแนวราบ ทั้งบ้านเดี่ยว ทาวน์โฮม และบ้านแฝด และยังมีโครงการคอนโดมิเนียมในกลางเมือง
+      สิ่งที่ได้รับ 
+      แอร์ mitsubishi inverter 4 ตัว
+      Sofa bed index 1 ตัว
+      ทีวี sony 55 นิ้ว 1 เครื่อง
+      เตียงนอนพร้อมฟูก 3 ห้องนอน ของsera grande 2 ห้อง(3.5 ฟุตกับ 5 ฟุต) อีกห้อง ของ index และฟูกนอน sealy (6ฟุต)
+      ตู้เสื้อผ้า และโต๊ะเครื่องแป้ง index 1ห้อง
+      ตู้เสื้อผ้า ikea 2 ห้อง
+      โต๊ะกินข้าว ikea ปรับได้4 หรือ 6 ที่นั่ง เก้าอี้ ikea 6 ตัว
+      ชุดครัว index soft coated
+      เตาแม่เหล็กไฟฟ้า hafele
+      ฮูด hafele
+      ซิงค์หิน hafele
+      ก็อกปรับได้ hafele
+      ตู้เย็น hitachi
+      เครื่องซักผ้า hitachi
+      ชั้นวางรองเท้า ikea 2 ตู้
+      เครื่องฟอกอากาศ xiao mi 1 เครื่อง
+      ต่อเติมครัวพื้นหลังคา
+      หลังคาพื้นโรงจอดรถ 
+
+"></textarea>
   </section>
 
   <section>
